@@ -19,9 +19,9 @@ void ReportError::OutputError(yyltype *loc, string msg) {
     numErrors++;
     fflush(stdout); // make sure any buffered text has been output
     if (loc) {
-        cout << endl << "*** Error line " << loc->first_line << "." << endl; // cambia por cout para q se pueda llevar a un txt
+        cerr << endl << "*** Error line " << loc->first_line << "." << endl; // cambia por cout para q se pueda llevar a un txt
     } else
-        cout << endl << "*** Error." << endl;
+        cerr << endl << "*** Error." << endl;
     cerr << "*** " << msg << endl << endl;
 }
 
